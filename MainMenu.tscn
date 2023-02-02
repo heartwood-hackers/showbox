@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Item.tres" type="Theme" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Title.tres" type="Theme" id=3]
+[ext_resource path="res://DemoMenu.gd" type="Script" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+margin_left = 366.0
+margin_top = 200.0
+margin_right = 658.0
+margin_bottom = 400.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 285.0
+margin_bottom = 193.0
+
+[node name="Welcome" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_right = 278.0
+margin_bottom = 174.0
+theme = ExtResource( 3 )
+text = "Welcome
+to
+Showbox!"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 178.0
+margin_right = 278.0
+margin_bottom = 182.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 186.0
+margin_right = 278.0
+margin_bottom = 186.0
+
+[node name="DemoMenu" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/CenterContainer"]
+margin_left = 139.0
+margin_right = 139.0
+alignment = 2
+script = ExtResource( 4 )
+
+[node name="DemoItemTemplate" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/CenterContainer/DemoMenu"]
+visible = false
+margin_right = 170.0
+margin_bottom = 39.0
+alignment = 2
+
+[node name="CursorIcon" type="TextureRect" parent="CenterContainer/PanelContainer/VBoxContainer/CenterContainer/DemoMenu/DemoItemTemplate"]
+visible = false
+margin_right = 36.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 36, 36 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="DemoLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/CenterContainer/DemoMenu/DemoItemTemplate"]
+margin_left = 40.0
+margin_right = 170.0
+margin_bottom = 39.0
+theme = ExtResource( 1 )
+text = "Demo Item"
+align = 2
