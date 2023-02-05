@@ -6,6 +6,7 @@ extends Node
 
 onready var main_menu = $MainMenu
 
+
 func _ready():
   var _ds = EventBus.connect("demo_selected", self, "demo_selected")
   var _de = EventBus.connect("demo_exited", self, "demo_exited")
@@ -20,6 +21,6 @@ func demo_selected(demo_filename: String):
 
 
 func demo_exited():
-  remove_child(current_demo)
+  current_demo.queue_free()
   current_demo = null
   main_menu.visible = true

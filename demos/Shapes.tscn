@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://demos/shapes/Triangle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://demos/shapes/Circle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://demos/shapes/Square.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource( 3 )]
+position = Vector2( 300, 300 )
+scale = Vector2( 3, 3 )
+color = Color( 0.2211, 0.67, 0.49044, 1 )
+
+[node name="Circle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 550, 300 )
+scale = Vector2( 3, 3 )
+color = Color( 0.2211, 0.67, 0.49044, 1 )
+
+[node name="Triangle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 800, 300 )
+rotation = 0.0
+scale = Vector2( 3, 3 )
+color = Color( 0.2211, 0.67, 0.49044, 1 )

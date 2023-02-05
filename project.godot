@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Circle",
+"language": "GDScript",
+"path": "res://demos/shapes/Circle.gd"
+}, {
+"base": "Node2D",
+"class": "Square",
+"language": "GDScript",
+"path": "res://demos/shapes/Square.gd"
+}, {
+"base": "Node2D",
+"class": "Triangle",
+"language": "GDScript",
+"path": "res://demos/shapes/Triangle.gd"
+} ]
+_global_script_class_icons={
+"Circle": "",
+"Square": "",
+"Triangle": ""
+}
+
 [application]
 
 config/name="showbox"

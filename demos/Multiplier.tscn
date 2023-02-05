@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://demos/Multiplier.gd" type="Script" id=1]
+[ext_resource path="res://demos/shapes/Square.gd" type="Script" id=2]
+[ext_resource path="res://demos/shapes/Circle.gd" type="Script" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 50, 50 )
+
+[node name="Multiplier" type="Node" parent="Node2D"]
+script = ExtResource( 1 )
+iter_x = 60
+iter_y = 60
+number_of_copies = 64
+number_of_rows = 8
+
+[node name="Square" type="Node2D" parent="Node2D/Multiplier"]
+script = ExtResource( 2 )
+color = Color( 0.67, 0.2211, 0.482958, 1 )
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 550, 50 )
+
+[node name="Multiplier" type="Node" parent="Node2D2"]
+script = ExtResource( 1 )
+iter_x = 60
+iter_y = 60
+number_of_copies = 64
+number_of_rows = 8
+
+[node name="Circle" type="Node2D" parent="Node2D2/Multiplier"]
+script = ExtResource( 3 )
+color = Color( 0.2211, 0.67, 0.49044, 1 )
