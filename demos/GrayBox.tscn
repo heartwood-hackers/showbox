@@ -21,7 +21,7 @@ albedo_texture = ExtResource( 5 )
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform( -1, 0, -0.000296744, 0, 1, 0, 0.000296744, 0, -1, 0, 2, -25.8606 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 use_collision = true
@@ -51,7 +51,6 @@ material = SubResource( 2 )
 
 [node name="CSGBox6" type="CSGBox" parent="."]
 transform = Transform( 4.6, 0, 0, 0, 2.42673, 0, 0, 0, 4.6, -0.0811195, 2.53929, 34.9094 )
-visible = false
 use_collision = true
 width = 5.65292
 depth = 0.43344

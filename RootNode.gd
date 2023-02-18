@@ -14,6 +14,9 @@ func _ready():
 
 var current_demo
 func demo_selected(demo_filename: String):
+  # early out if already running a demo
+  if current_demo: return
+
   var scene := load("res://demos/%s" % demo_filename)
   current_demo = scene.instance()
   main_menu.visible = false
@@ -21,6 +24,9 @@ func demo_selected(demo_filename: String):
 
 
 func demo_exited():
+  # early out if no demo to exit
+  if !current_demo: return
+
   current_demo.queue_free()
   current_demo = null
   main_menu.visible = true

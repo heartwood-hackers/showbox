@@ -11,5 +11,5 @@ PlayerPath = NodePath("..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45646, 0 )
 
 [node name="Camera" type="Camera" parent="InnerGimbal"]
-transform = Transform( 1, 0, 0, 0, 0.959136, 0.282942, 0, -0.282942, 0.959137, 0, 0.4, 4 )
+transform = Transform( 0.333333, 0, 0, 0, 0.319712, 0.0943141, 0, -0.0943141, 0.319712, -3.17891e-07, -0.0362856, 2.31268 )
 current = true

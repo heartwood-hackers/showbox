@@ -1,14 +1,14 @@
 extends Spatial
 
-export(NodePath) var PlayerPath  = "" #You must specify this in the inspector!
-export(float) var MovementSpeed = 10
-export(float) var Acceleration = 3
-export(float) var MaxJump = 19
-export(float) var MouseSensitivity = 2
-export(float) var RotationLimit = 45
+export(NodePath) var PlayerPath #You must specify this in the inspector!
+export(float) var MovementSpeed = 10.0
+export(float) var Acceleration = 3.0
+export(float) var MaxJump = 19.0
+export(float) var MouseSensitivity = 2.0
+export(float) var RotationLimit = 45.0
 export(float) var MaxZoom = 0.5
 export(float) var MinZoom = 1.5
-export(float) var ZoomSpeed = 2
+export(float) var ZoomSpeed = 2.0
 
 var Player
 var InnerGimbal
