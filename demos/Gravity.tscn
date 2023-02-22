@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://demos/shapes/Circle.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 5000.0
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 125.0
@@ -9,6 +12,32 @@ radius = 125.0
 radius = 25.0
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Center" type="Area2D" parent="."]
+position = Vector2( 449, 176 )
+space_override = 3
+gravity_point = true
+gravity = 8.0
+linear_damp = 0.0
+angular_damp = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Center"]
+shape = SubResource( 3 )
+
+[node name="Circle" type="Node2D" parent="Center"]
+script = ExtResource( 1 )
+color = Color( 0.745098, 0.745098, 0.745098, 0.168627 )
+radius = 5000
+
+[node name="Circle2" type="Node2D" parent="Center"]
+script = ExtResource( 1 )
+color = Color( 0, 0.470588, 0.701961, 0.168627 )
+radius = 1500
+
+[node name="Circle3" type="Node2D" parent="Center"]
+script = ExtResource( 1 )
+color = Color( 0.694118, 0.0470588, 0, 0.168627 )
+radius = 3000
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 484, 495 )
@@ -113,6 +142,74 @@ color = Color( 0.67, 0.325843, 0.2211, 1 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
-current = true
 smoothing_enabled = true
 smoothing_speed = 2.0
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2( -1909, -105 )
+linear_velocity = Vector2( 135, 0 )
+linear_damp = 0.0
+
+[node name="Circle" type="Node2D" parent="RigidBody2D2"]
+script = ExtResource( 1 )
+color = Color( 0.67, 0.325843, 0.2211, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D2"]
+smoothing_enabled = true
+smoothing_speed = 2.0
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2( -924, 277 )
+linear_velocity = Vector2( 135, 0 )
+linear_damp = 0.0
+
+[node name="Circle" type="Node2D" parent="RigidBody2D3"]
+script = ExtResource( 1 )
+color = Color( 0.67, 0.325843, 0.2211, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D3"]
+smoothing_enabled = true
+smoothing_speed = 2.0
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2( 571, 171 )
+linear_velocity = Vector2( 135, 0 )
+linear_damp = 0.0
+
+[node name="Circle" type="Node2D" parent="RigidBody2D4"]
+script = ExtResource( 1 )
+color = Color( 0.67, 0.325843, 0.2211, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D4"]
+smoothing_enabled = true
+smoothing_speed = 2.0
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2( -4941, 915 )
+linear_velocity = Vector2( 135, 0 )
+linear_damp = 0.0
+
+[node name="Circle" type="Node2D" parent="RigidBody2D5"]
+script = ExtResource( 1 )
+color = Color( 0.67, 0.325843, 0.2211, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D5"]
+smoothing_enabled = true
+smoothing_speed = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 404, 220 )
+current = true
+zoom = Vector2( 5, 5 )
